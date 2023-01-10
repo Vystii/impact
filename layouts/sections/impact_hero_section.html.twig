@@ -1,0 +1,43 @@
+ <!-- ======= Hero Section ======= -->
+  <section id="impact-hero" class="impact-hero">
+	<div class="container position-relative">
+	  <div class="row gy-5" data-aos="fade-in">
+		<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+		  {% if content.impact_hero_title %}
+		  <h2 {{region_attributes.impact_hero_title.addClass([''])}}>
+		  	{{content.impact_hero_title}}
+		  </h2>
+		  {% endif %}
+
+		  {% if content.impact_hero_description %}
+			  <p {{region_attributes.description.addClass([''])}}>{{content.impact_hero_description}}</p>
+		  {% endif %}
+		  <div class="d-flex justify-content-center justify-content-lg-start">
+			{% if content.impact_hero_call_to_action %}
+				{{content.impact_hero_call_to_action}}
+			{% endif %}
+
+            {% if content.impact_hero_watch_vide %}
+                {{content.impact_hero_watch_vide}}
+            {% endif %}
+		  </div>
+		</div>
+		<div {{region_attributes.impact_hero_right.addClass(['col-lg-6', 'order-1', 'order-lg-2'])}}>
+            {% if content.impact_hero_image %}
+                {{content.impact_hero_image}}
+            {% endif %}
+œ		</div>
+	  </div>
+	</div>
+
+	<div class="icon-boxes position-relative">
+	  <div class="container position-relative">
+		<div {{region_attributes.impact_hero_many_elements.addClass(['row', 'gy-4', 'mt-5'])}}>
+            {{content.impact_hero_many_elements}}
+		</div>
+	  </div>
+	</div>
+
+	</div>
+  </section>
+  <!-- End Hero Section -->
