@@ -1,0 +1,15 @@
+{
+    "name": "debian/impact",
+    "description": "preier",
+    "type": "drupal-module",
+    "require": {
+        "stephane888/formatage_models": "3.x"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vystii",
+            "email": "ngahabanda@gmail.com"
+        }
+    ]
+}
