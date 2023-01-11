@@ -1,6 +1,12 @@
-impact_section:
+impact_hero_section:
 	js:
 		layouts/js/impact_hero_section.js: {}
 	css:
 		theme:
 			layouts/css/impact_hero_sections.css: {}
+
+impact_hero_teaser:
+	js:
+		layouts/js/impact_hero_teaser.js: {}
+	scss:
+		

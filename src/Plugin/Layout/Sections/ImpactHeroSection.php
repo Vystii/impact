@@ -12,8 +12,8 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  label = @Translation("impact hero section"),
  *  category = @Translation("impact"),
  *  path = "layouts/sections",
+ *  library = "impact/impact_hero_section", * 
  *  template = "impact-hero-section",
- *  default_region = "content",
  *  regions = {
  *      "impact_hero_title" = {
  *          "label" = @translation("impact hero title"), 

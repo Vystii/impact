@@ -1,0 +1,13 @@
+{% if content %}
+    <div class="icon-box">
+        {% if content.impact_hero_teaser_icon %}
+            <div class="icon">
+                {{content.impact_hero_teaser_icon}}
+            </div>
+        {% endif %}
+    
+        {% if content.impact_hero_teaser_title %}
+            <h4 {{region_attributes.impact_hero_teaser_title.addClass("title")}}><span {{attributes.addclass("stretched-link")}}>{{content.impact_hero_teaser_title}}</span></h4>
+        {% endif %}
+    </div>
+{% endif %}
