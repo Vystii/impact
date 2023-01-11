@@ -1,9 +1,9 @@
 {
     "name": "debian/impact",
     "description": "preier",
-    "type": "drupal-module",
+    "type": "drupal-module-custom",
     "require": {
-        "stephane888/formatage_models": "3.x"
+        "stephane888/formatage_models": "dev-3x | ^3.1"
     },
     "license": "MIT",
     "authors": [
