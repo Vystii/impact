@@ -1,6 +1,6 @@
 {
-    "name": "debian/impact",
-    "description": "preier",
+    "name": "vystii/impact",
+    "description": "Module pour l'intégration de paragraphes drupal",
     "type": "drupal-module-custom",
     "require": {
         "stephane888/formatage_models": "dev-3x | ^3.1"
