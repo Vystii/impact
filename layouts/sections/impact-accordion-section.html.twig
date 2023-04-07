@@ -1,0 +1,54 @@
+{% if content %}
+    <section {{ attributes.addClass("impact-accordion-section container") }}>
+
+        <div class="row">
+            <div class="side-left col-md-8 py-4">
+                <div class="py-4">
+                    <div class="mb-xl-5 illustrator">
+                        <div>
+                            {% if content.impact_accordion_image %}
+                                {{ content.impact_accordion_image }}
+                            {% endif %}
+
+                            {% if content.impact_accordion_image_btn %}
+                                {{ content.impact_accordion_image_btn }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="side-left-title">
+                        {% if content.impact_accordion_title %}
+                            <div {{ region_attributes.content.impact_accordion_title.addClass("h3", "font-weight-bold", "text-body", "mb-xl-5") }}>
+                                {{ content.impact_accordion_title }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="side-left-description">
+                        <div>
+                            {% if content.impact_accordion_description %}
+                                <div {{ region_attributes.impact_accordion_description.addClass(["h6", "text-black-50", "mb-xl-5"]) }}>
+                                    {{ content.impact_accordion_description }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="side-left-call-to-action">
+                        <div>
+                            <div class="font-weight-bold">
+                                {% if content.impact_accordion_call_to_action %}
+                                    {{ content.impact_accordion_call_to_action }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-4">
+                {% if content.impact_accordion_fields %}
+                    <div {{ region_attributes.impact_accordion_fields.addClass(["py-4"]) }}>
+                        {{ content.impact_accordion_fields }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endif %}

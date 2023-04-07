@@ -1,9 +1,16 @@
 impact_hero_section:
 	js:
-		layouts/js/impact_hero_section.js: {}
+		js/impact_hero_section.js: {}
 	css:
 		theme:
-			layouts/css/impact_hero_sections.css: {}
+			css/impact-hero-sections.css: {}
+
+impact_accordion_section:
+	js:
+		js/impact-accordion-section.js: {}
+	css:
+		theme:
+			css/impact_accordion_section.css: {}
 
 impact_hero_teaser:
 	js:
