@@ -22,8 +22,7 @@ class TimeBlock extends BlockBase
   {
     $build = [];
     $build['#theme'] = 'time_block';
-    $build['time_block']['#markup'] = date("l");
-
+    $build['time_block']['#markup'] = \Drupal::service('date.formatter')->format(strtotime("today"), 'custom', 'd F Y', NULL, 'fr');
     return $build;
   }
 }
