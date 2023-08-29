@@ -39,26 +39,23 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  */
 
 
-class ImpactAccordionSection extends FormatageModelsSection
-{
+class ImpactAccordionSection extends FormatageModelsSection {
 
     /**
      * {@inheritdoc}
      * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::_construct
      */
-    public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager)
-    {
+    public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager) {
         // TODO auto-generated method stub
         parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'impact') . "/icons/sections/impact-accordion.png");
+        $this->pluginDefinition->set('icon', $this->pathResolver->getPath('module', 'impact') . "/icons/sections/impact-accordion.png");
     }
 
     /**
      * {@inheritdoc}
      * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::build
      */
-    public function build(array $regions)
-    {
+    public function build(array $regions) {
         // TODO auto-generated method stub
         $build = parent::build($regions);
         FormatageModelsThemes::formatSettingValues($build);
@@ -69,8 +66,7 @@ class ImpactAccordionSection extends FormatageModelsSection
     /**
      * {@inheritdoc}
      */
-    public function defaultConfiguration()
-    {
+    public function defaultConfiguration() {
         return parent::defaultConfiguration() + [
             'css' => '',
             'load_library' => true,

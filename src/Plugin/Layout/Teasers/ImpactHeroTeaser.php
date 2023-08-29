@@ -29,26 +29,25 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
  * 
  */
 
-class ImpactHeroTeaser extends FormatageModelsTeasers 
-{
+class ImpactHeroTeaser extends FormatageModelsTeasers {
 
     /**
-    *
-    * {@inheritdoc}
-    * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
-    */
+     *
+     * {@inheritdoc}
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::__construct()
+     */
     public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
         // TODO Auto-generated method stub
         parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'impact') . "/icones/teasers/impact-hero-teaser.png");
+        $this->pluginDefinition->set('icon', $this->pathResolver->getPath('module', 'impact') . "/icones/teasers/impact-hero-teaser.png");
     }
 
     /**
-    *
-    * {@inheritdoc}
-    * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
-    *
-    */
+     *
+     * {@inheritdoc}
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels:build()
+     *
+     */
     public function build(array $regions) {
         // TODO Auto-generated method stub
         $build = parent::build($regions);
@@ -61,8 +60,7 @@ class ImpactHeroTeaser extends FormatageModelsTeasers
      * {@inheritdoc}
      * 
      */
-    public function defaultConfiguration() 
-    {
+    public function defaultConfiguration() {
         return parent::defaultConfiguration() + [
             'css' => '',
             'content' => [
@@ -88,5 +86,4 @@ class ImpactHeroTeaser extends FormatageModelsTeasers
             ]
         ];
     }
-
 }

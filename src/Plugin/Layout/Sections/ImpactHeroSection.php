@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\impact\Plugin\Layout\Sections;
 
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
@@ -38,26 +39,23 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  */
 
 
-class ImpactHeroSection extends FormatageModelsSection
-{
+class ImpactHeroSection extends FormatageModelsSection {
 
     /**
      * {@inheritdoc}
      * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::_construct
      */
-    public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager)
-    {
+    public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager) {
         // TODO auto-generated method stub
         parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'impact') . "/icons/sections/impact-hero.png");
+        $this->pluginDefinition->set('icon', $this->pathResolver->getPath('module', 'impact') . "/icons/sections/impact-hero.png");
     }
 
     /**
      * {@inheritdoc}
      * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::build
      */
-    public function build(array $regions)
-    {
+    public function build(array $regions) {
         // TODO auto-generated method stub
         $build = parent::build($regions);
         FormatageModelsThemes::formatSettingValues($build);
@@ -68,15 +66,14 @@ class ImpactHeroSection extends FormatageModelsSection
     /**
      * {@inheritdoc}
      */
-    public function defaultConfiguration()
-    {
+    public function defaultConfiguration() {
         return parent::defaultConfiguration() + [
             'css' => '',
             'load_library' => true,
             'content' => [
                 'builder-form' => true,
                 'info' => [
-                    'title' =>'Impact Hero section',
+                    'title' => 'Impact Hero section',
                     'loader' => 'dynamic',
                 ],
                 'fields' => [
