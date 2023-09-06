@@ -1,19 +1,37 @@
 impact_hero_section:
-	js:
-		js/impact_hero_section.js: {}
-	css:
-		theme:
-			css/impact-hero-sections.css: {}
+  js:
+    js/impact_hero_section.js: {}
+  css:
+    theme:
+      css/impact-hero-sections.css: {}
 
 impact_accordion_section:
-	js:
-		js/impact-accordion-section.js: {}
-	css:
-		theme:
-			css/impact_accordion_section.css: {}
+  js:
+    js/impact-accordion-section.js: {}
+  css:
+    theme:
+      css/impact_accordion_section.css: {}
+
+impact_vue_lib:
+  js:
+    https://unpkg.com/vue@3/dist/vue.global.js:
+      { type: external, minified: true }
 
 impact_hero_teaser:
-	js:
-		layouts/js/impact_hero_teaser.js: {}
-	scss:
-		
+  js:
+    layouts/js/impact_hero_teaser.js: {}
+  scss:
+
+impact_booking_parking:
+  js:
+    files/parkingApp.umd.js: {}
+  css:
+    component:
+      files/style.css: {}
+
+impact_fly_app:
+  js:
+    flyBooking/flyBooking.umd.js: {}
+  css:
+    component:
+      flyBooking/style.css: {}

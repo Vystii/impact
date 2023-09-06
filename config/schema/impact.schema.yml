@@ -1,0 +1,7 @@
+block.settings.impact_book_parking:
+  type: block_settings
+  label: 'Book Parking block'
+  mapping:
+    example:
+      type: string
+      label: Example
